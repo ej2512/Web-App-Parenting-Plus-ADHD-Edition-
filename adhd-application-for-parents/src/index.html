@@ -1,0 +1,240 @@
+<body>
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
+  <div class="adhd-app">
+    <div class="left-bar">
+      <div class="upper-part">
+        <div class="actions">
+          <div class="circle"></div>
+          <div class="circle-2"></div>
+        </div>
+      </div>
+      <div class="left-content">
+        <ul class="action-list">
+          <li class="item">
+            <img src="https://assets.codepen.io/10958332/inbox-svgrepo-com.svg" alt="inbox" />
+            <button id="forums-btn">Forums</button>
+          </li>
+          <li class="item">
+            <img src="https://assets.codepen.io/10958332/game-svgrepo-com+%281%29.svg" alt="game" />
+            <button id="activity-btn">Activity</button>
+          </li>
+          <li class="item">
+            <img src="https://assets.codepen.io/10958332/calendar-svgrepo-com+%283%29_1.svg" alt="calendar" />
+            <button id="calendar-btn">Calendar</button>
+          </li>
+          <li class="item">
+            <img src="https://assets.codepen.io/10958332/make-a-donation-svgrepo-com.svg" alt="donate" />
+            <button id="help-support-btn">Support</button>
+          </li>
+          <li class="item">
+            <img src="https://assets.codepen.io/10958332/friends-svgrepo-com.svg" alt="community" />
+            <button id="community-btn">Community</button>
+          </li>
+          <li class="item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke <ul class="category-list">
+          <li class="item">
+            <img src="https://assets.codepen.io/10958332/emergency-kit-svgrepo-com.svg" alt="emergency" />
+            <span>Emergency</span>
+          </li>
+          <li class="item">
+            <img src="https://assets.codepen.io/10958332/question-message-svgrepo-com.svg" alt="question" />
+            <span>Q&A</span>
+          </li>
+          <li class="item">
+            <img src="https://assets.codepen.io/10958332/setting-svgrepo-com+%281%29.svg" alt="question" />
+            <span>Settings</span>
+          </li>
+          <li class="item">
+            <img src="https://assets.codepen.io/10958332/telephone-svgrepo-com.svg" alt="contact" />
+            <span>Contact Us</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="page-content" id="forums-page">
+      <div class="page-header">
+        <div class="header">Posts</div>
+        <div class="add-post">
+          <button class="add-post-btn">+ Add Post</button>
+        </div>
+      </div>
+      <div class="content-categories">
+        <div class="label-wrapper">
+          <input class="nav-item" name="nav" type="radio" id="opt-1" checked>
+          <label class="category" for="opt-1">All</label>
+        </div>
+        <div class="label-wrapper">
+          <input class="nav-item" name="nav" type="radio" id="opt-2">
+          <label class="category" for="opt-2">Starred</label>
+        </div>
+        <div class="label-wrapper">
+          <input class="nav-item" name="nav" type="radio" id="opt-3">
+          <label class="category" for="opt-3">Draft</label>
+        </div>
+        <div class="label-wrapper">
+          <input class="nav-item" name="nav" type="radio" id="opt-4">
+          <label class="category" for="opt-4">Trash</label>
+        </div>
+      </div>
+      <div class="posts-wrapper">
+      </div>
+    </div>
+    <div class="page-content" id="help-support-page" style="display: none;">
+      <div class="form">
+        <form class="donately-validation form--donate" id="intervalDonateForm" method="post">
+          <h4 class="form-title">Support Our Community </h4>
+          <fieldset class="row input-price-options">
+            <ul class="form_radio">
+              <li id="priceInterval1" class="">
+                <input type="radio" name="donate-amount" checked="true" value="12" id="choice_6_0">
+                <label for="choice_6_0">$12</label>
+              </li>
+              <li id="priceInterval2" class="">
+                <input type="radio" name="donate-amount" value="65" id="choice_6_1">
+                <label for="choice_6_1">$65</label>
+              </li>
+              <li id="priceInterval3" class="">
+                <input type="radio" name="donate-amount" value="100" id="choice_6_2">
+                <label for="choice_6_2">$100</label>
+              </li>
+              <li id="priceInterval4" class="">
+                <input type="radio" name="donate-amount" value="500" id="choice_6_3">
+                <label for="choice_6_3">$500</label>
+              </li>
+            </ul>
+            <div class="other_amount">
+              <label class="label-inline" for="donation_amount">$</label>
+              <input name="donation_amount" class="required" id="donationAmount" type="number" value="12" required="">
+            </div>
+          </fieldset>
+          <fieldset class="row radio-donation">
+            <div class="invalid-choice">
+              <p>* Error: Please select one to proceed</p>
+            </div>
+            <ul class="gfield_radio" id="input_2_4">
+              <li>
+                <input name="recurring" type="radio" value="1" id="choice_4_1">
+                <label for="choice_4_1">Monthly recurring donation</label>
+              </li>
+              <li>
+                <input name="recurring" type="radio" value="0" id="choice_4_0">
+                <label for="choice_4_0">One time donation</label>
+              </li>
+            </ul>
+          </fieldset>
+          <h4 class="personal-title">Personal Information</h4>
+          <fieldset class="form__contact row">
+            <div class="form__field-name">
+              <label for="first_name" class="label-inline"></label>
+              <input type="text" class="input-half required" name="first_name" id="firstName" placeholder="First name" required="">
+              <input type="text" class="input-half required" name="last_name" id="lastName" placeholder="Last name" required="">
+            </div>
+            <div class="form__field-email">
+              <label for="email_address" class="label-inline"></label>
+              <input type="email" name="email_address" class="required" id="emailAddress" placeholder="Email address" required="">
+            </div>
+          </fieldset>
+          <fieldset class="row">
+            <div class="btn--donate">
+              <button href="#donation-form" type="submit" id="donate_card_info" class="btn btn--submit btn--enter">Enter Card Info</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div class="page-content" id="calendar-page" style="display: none;">
+      <div class="container">
+        <div class="row">
+          <div class="date">
+            <h2 id="current-date">
+              <!-- JavaScript will fill this in -->
+            </h2>
+            <h1>
+              Today
+            </h1>
+          </div>
+          <div class="add-task">
+            <button class="add-task-btn">+ Add Task</button>
+          </div>
+        </div>
+        <div class="calendar">
+          <div class="row weekdays">
+            <div class="day">Sun</div>
+            <div class="day">Mon</div>
+            <div class="day">Tue</div>
+            <div class="day">Wed</div>
+            <div class="day">Thu</div>
+            <div class="day">Fri</div>
+            <div class="day">Sat</div>
+          </div>
+          <div class="month">
+            <!-- Dates will be dynamically filled in here -->
+          </div>
+        </div>
+        <ul class="timeline">
+        </ul>
+      </div>
+    </div>
+    <div class="page-content" id="activity-page" style="display: none;">
+      <div class="intro-content">
+        <h1 class="games-title">ADHD Games and Activities</h1>
+        <p class="games-intro">
+          <br>ADHD parenting can be hard, but don’t worry, MentalUP ADHD games online and free!<br><br>
+          With attention exercises designed by ADHD specialists, which improve focus skills and enhance concentration, attention, learning, and many other skills, kids will have fun, and parents will notice a positive change in their children's behavior.
+        </p>
+      </div>
+      <div class="games-container">
+        <div class="game-card card1">
+          <img src="https://assets.codepen.io/10944229/e1ac5240497a686c014a3a76b2b94abf64bb9ce8_file_mobile_MEMORY-GAME-SHOT-2-5760x4512.png" alt="Memory Game" class="game-icon elephant" />
+          <div class="game-icon elephant"></div>
+          <h2>Memory Game</h2>
+          <p>This game is great for improving attention and memory.</p>
+          <button class="play-button">Play</button>
+        </div>
+        <div class="game-card card2">
+          <img src="https://assets.codepen.io/10944229/you-are-different.png" alt="Spot the Difference" class="game-icon fish" />
+          <div class="game-icon fish"></div>
+          <h2>Spot the Difference</h2>
+          <p>If you like fun attention activities for ADHD then give this game for ADHD children a go.</p>
+          <button class="play-button">Play</button>
+        </div>
+        <div class="game-card card3">
+          <img src="https://assets.codepen.io/10944229/dwarf-giant.png" alt="Dwarf Raabit" class="game-icon rabbit" />
+          <div class="game-icon rabbit"></div>
+          <h2>Giant Dwarf</h2>
+          <p>Games help kids improve their reaction control, focus, and divided attention skills.</p>
+          <button class="play-button">Play</button>
+        </div>
+      </div>
+    </div>
+    <div class="right-bar">
+      <div class="top-part">
+        <img src="https://assets.codepen.io/10958332/friends-svgrepo-com.svg" />
+        <div class="count">6</div>
+      </div>
+      <div class="header">Live Seminar</div>
+      <div class="right-content"></div>
+    </div>
+    <div id="addPostModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="newPostForm">
+          <input type="text" id="newPostTitle" placeholder="Title" required>
+          <textarea id="newPostContent" placeholder="Content" required></textarea>
+          <button type="submit">Submit</button>
+          <button type="button" id="saveDraftButton">Save Draft</button>
+        </form>
+      </div>
+    </div>
+    <div id="addTaskModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="newTaskForm">
+          <input type="text" id="newTaskTitle" placeholder="Title" required>
+          <textarea id="newTaskContent" placeholder="Content" required></textarea>
+          <input type="text" id="newTaskTime" placeholder="Time (e.g., 10:00 AM)" required>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+</body>
